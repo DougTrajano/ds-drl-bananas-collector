@@ -11,9 +11,8 @@ class QNetwork(nn.Module):
         ======
             state_size (int): Dimension of each state
             action_size (int): Dimension of each action
+            nb_hidden (int): Number of hidden layers
             seed (int): Random seed
-            fc1_units (int): Number of nodes in first hidden layer
-            fc2_units (int): Number of nodes in second hidden layer
         """
         super(QNetwork, self).__init__()
         self.seed = torch.manual_seed(seed)
