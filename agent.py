@@ -9,6 +9,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
 
 class Agent():
     """Interacts with and learns from the environment."""
@@ -45,8 +46,8 @@ class Agent():
         self.losses = []
 
         # Q-Network
-        self.qnetwork_local = QNetwork(self.state_size, self.action_size, nb_hidden=nb_hidden, seed=seed).to(device)
-        self.qnetwork_target = QNetwork(self.state_size, self.action_size, nb_hidden=nb_hidden, seed=seed).to(device)       
+        self.qnetwork_local = QNetwork(self.state_size, self.action_size, layers=nb_hidden, seed=seed).to(device)
+        self.qnetwork_target = QNetwork(self.state_size, self.action_size, layers=nb_hidden, seed=seed).to(device)       
         self.optimizer = optim.Adam(self.qnetwork_local.parameters(), lr=self.learning_rate)
 
         # Define memory
@@ -90,9 +91,9 @@ class Agent():
 
         # Epsilon-greedy action selection
         if random.random() > eps:
-            return np.argmax(action_values.cpu().data.numpy())
+            return np.argmax(action_values.cpu().data.numpy()).astype(int)
         else:
-            return random.choice(np.arange(self.action_size))
+            return random.choice(np.arange(self.action_size)).astype(int)
 
     def learn(self, experiences):
         """Update value parameters using given batch of experience tuples.
