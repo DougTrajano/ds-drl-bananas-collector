@@ -3,5 +3,4 @@ unityagents
 torch
 numpy
 matplotlib
-collections
 tqdm
