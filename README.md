@@ -6,6 +6,8 @@ It's use the [Unity Machine Learning Agents Toolkit](https://github.com/Unity-Te
 
 The environment used for this project is the Udacity version of the Banana Collector environment, from Unity. The goal of the agent is to collect as many yellow bananas as possible while avoiding blue bananas. 
 
+![](/images/banana-collector.gif)
+
 ## Installation
 
 The installation process is divided in three parts:
