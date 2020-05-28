@@ -1,6 +1,7 @@
-tensorflow==1.7.1
+tensorflow==1.15.0
 unityagents
 torch
+cupy-cuda102
 numpy
 matplotlib
 tqdm
