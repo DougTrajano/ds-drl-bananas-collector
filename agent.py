@@ -8,8 +8,7 @@ import torch.optim as optim
 from network import QNetwork
 from memory import PrioritizedMemory, ReplayMemory
 
-#device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-device = torch.device("cpu")
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 class Agent():
     """Interacts with and learns from the environment."""
