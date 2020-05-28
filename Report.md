@@ -102,22 +102,22 @@ See below the best hyperparameters founded:
 
 **Agent with ReplayMemory**
 
-![]("images/agent_ReplayMemory.png")
+![]("/images/agent_ReplayMemory.png")
 
 **Agent with PrioritizedMemory**
 
-![]("images/agent_PrioritizedMemory.png")
+![]("/images/agent_PrioritizedMemory.png")
 
 **Agent with PrioritizedMemory losses**
 
-![]("images/agent_PrioritizedMemory_losses.png")
+![]("/images/agent_PrioritizedMemory_losses.png")
 
 
 # 5. Testing the agent
 
 See below the agent trained:
 
-![]("images/banana-collector.gif")
+![]("/images/banana-collector.gif")
 
 # 6. Future work
 
